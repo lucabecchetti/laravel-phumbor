@@ -1,0 +1,43 @@
+{
+    "name": "brokenice/laravel-phumbor",
+    "description": "Laravel package adding support for the Phumbor PHP library for Thumbor.",
+	"homepage": "https://github.com/lucabecchetti/laravel-phumbor",
+	"license": "MIT",
+	"keywords": ["laravel", "phumbor", "thumbor"],
+    "authors": [
+        {
+            "name": "Luca Becchetti",
+            "email": "luca.becchetti@brokenice.it"
+        }
+    ],
+    "support" : {
+        "source" : "https://github.com/lucabecchetti",
+        "issues" : "https://github.com/lucabecchetti"
+    },
+    "require": {
+        "php": ">=7.1",
+        "illuminate/support": "5.*|6.*",
+        "99designs/phumbor": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brokenice\\LaravelPhumbor\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brokenice\\LaravelPhumbor\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brokenice\\LaravelPhumbor\\LaravelPhumborServiceProvider"
+            ],
+            "aliases": {
+                "Phumbor": "Brokenice\\LaravelPhumbor\\Facades\\Phumbor"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
